@@ -34,7 +34,7 @@ def main():
     print("latest monetate upload {}".format(latest_monetate_import))
     latest_kibo_import = get_latest_kibo_import()
     print("latest kibo upload {}".format(
-        latest_kibo_import if latest_kibo_import["upload_time"] else "Never uploaded"))
+        latest_kibo_import if latest_kibo_import and latest_kibo_import["upload_time"] else "Never uploaded"))
 
     if(latest_kibo_import and latest_kibo_import["upload_time"] == latest_monetate_import["upload_time"]):
         print("up to date")
